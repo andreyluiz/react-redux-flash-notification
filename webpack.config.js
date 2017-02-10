@@ -8,8 +8,8 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loaders: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
-            { test: /\.scss$/, loaders: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' }) },
+            { test: /\.css$/, loaders: ExtractTextPlugin.extract({ use: 'css-loader' }) },
+            { test: /\.scss$/, loaders: ExtractTextPlugin.extract({ use: 'css-loader!sass-loader' }) },
             { test: [/\.js$/, /\.jsx$/], loaders: ['react-hot-loader', 'babel-loader'] },
         ]
     },
