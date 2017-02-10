@@ -9,7 +9,7 @@ export function hideGrowler() {
     dispatch({ type: GROWLER__HIDE });
     clearTimeout(hiddenTimeOut);
     clearTimeout(hideTimeOut);
-    hiddenTimeOut = window.setTimeout(() =>{
+    hiddenTimeOut = setTimeout(() =>{
       dispatch({
         type: GROWLER__HIDED,
       });
@@ -22,7 +22,7 @@ export function hideTimeOutGrowler(growler, time) {
   return dispatch => {
     if (growler && growler.status === 'show') {
       clearTimeout(hideTimeOut);
-      hideTimeOut = window.setTimeout(() =>{
+      hideTimeOut = setTimeout(() =>{
         dispatch({
           type: GROWLER__HIDE,
         });
